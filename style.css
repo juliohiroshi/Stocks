@@ -1,0 +1,141 @@
+:root{
+    --navfontcolor: black;
+    --navbackground: rgb(224, 204, 149);
+}
+.trocacor{
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+    height: fit-content;
+}
+@font-face {
+    font-family: 'Lemon';
+    src: url('Lemon\ Days.otf') format('opentype'),
+     url('Lemon\ Days.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+*{
+    font-family: 'Lemon';
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.title{
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+/*Carteira de ações*/
+.stock_place{
+    margin-top: 5vh;
+    overflow: hidden;
+    width: calc(100%-4vw);
+    min-height: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    
+}
+.stock{ 
+    position:relative;
+    animation: stockanimation 15s infinite linear;
+    margin-left: 20px;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 75px;
+    background-color:rgb(249, 252, 253);
+    border-radius: 25px;
+    border: 1px solid black;
+    flex-direction: column;
+}
+.stock_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stock_change{
+    width: fit-content;
+}
+.stock_price{
+    text-align: center;
+}
+/*Dividendos*/
+.table_space{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+table{
+    background-color: var(--navbackground);
+    height: 100%;
+    width: 600px;
+    padding: 30px;
+    border-radius: 30px;
+}
+th{
+    text-align: left;
+}
+
+/*Navigation bar*/
+.nav{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 100vw;
+    height: fit-content;
+    color: var(--navfontcolor);
+    background-color: var(--navbackground);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.left{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left a{
+    color: var(--navfontcolor);
+}
+.center{
+    font-size: 30px;
+}
+.right{
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right a{
+    color: var(--navfontcolor);
+    
+}
+/*Ajuda*/
+.title-help{
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+.content-help{
+    margin-left: 2vw;
+}
+
+@keyframes stockanimation{
+    from{
+        left: -110vw;
+    }
+    to{
+        left: 100vw;
+    }
+}
